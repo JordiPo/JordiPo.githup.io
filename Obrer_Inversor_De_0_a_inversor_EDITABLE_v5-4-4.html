@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obrer Inversor · De 0 a inversor</title>
+<meta name="description" content="Guía práctica para empezar a construir patrimonio sin ser experto en finanzas.">
+<style>
+:root{--navy:#0D1B2A;--green:#2ECC71;--yellow:#F5C542;--cream:#F7F9FB;--text:#17212b;--muted:#66727e;--white:#fff;--border:#dfe6eb;--shadow:0 12px 35px rgba(13,27,42,.10);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:var(--cream);line-height:1.55}a{color:inherit}
+.container{width:min(1080px,92%);margin:auto}header{background:var(--navy);color:white}nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--green)}.navlinks{display:flex;gap:20px;font-size:14px}.navlinks a{text-decoration:none;opacity:.88}
+.hero{padding:70px 0 78px;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}.eyebrow{display:inline-block;color:var(--navy);background:var(--green);padding:6px 11px;border-radius:999px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.7px}h1{font-size:clamp(42px,6vw,70px);line-height:1.02;margin:18px 0;letter-spacing:-2.5px}.hero p{font-size:18px;color:#dbe3e9;max-width:650px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:13px;padding:13px 18px;font-weight:800;text-decoration:none;cursor:pointer;min-height:44px}.btn-green{background:var(--green);color:var(--navy)}.btn-light{background:white;color:var(--navy)}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-card{background:white;color:var(--text);padding:26px;border-radius:var(--radius);box-shadow:var(--shadow)}.hero-card p{color:#4f5b66}.hero-card .big{font-size:42px;font-weight:900;color:var(--navy)}.mini{font-size:13px;color:var(--muted)}.progress{height:9px;background:#e9eef1;border-radius:99px;overflow:hidden;margin:14px 0}.progress i{display:block;height:100%;width:35%;background:var(--green)}
+section{padding:70px 0}.section-head{max-width:720px;margin-bottom:30px}.kicker{color:#198f4b;font-weight:900;font-size:13px;text-transform:uppercase;letter-spacing:.8px}h2{font-size:clamp(30px,4vw,44px);line-height:1.08;margin:7px 0 10px;color:var(--navy);letter-spacing:-1px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:23px;box-shadow:0 6px 18px rgba(13,27,42,.04)}.card h3{margin:0 0 8px;color:var(--navy)}.card p{margin:0;color:var(--muted)}.number{width:38px;height:38px;border-radius:12px;background:#e9f9ef;color:#187d43;display:grid;place-items:center;font-weight:900;margin-bottom:15px}
+.calculator{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.panel{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:25px}label{font-weight:800;font-size:14px;display:block;margin:15px 0 7px}input[type=number]{width:100%;padding:13px 14px;border:1px solid #ccd6dd;border-radius:12px;font-size:16px;background:#fff}.result{background:var(--navy);color:white;border-radius:18px;padding:25px;margin-top:20px}.result strong{font-size:38px;color:var(--green);display:block}.range{width:100%}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tab{border:1px solid var(--border);background:white;padding:10px 14px;border-radius:999px;font-weight:800;cursor:pointer}.tab.active{background:var(--navy);color:white}.tabpanel{display:none}.tabpanel.active{display:block}
+.checklist{display:grid;gap:10px}.check{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--border);border-radius:15px;padding:14px}.check input{margin-top:5px;accent-color:var(--green);width:18px;height:18px}
+.faq details{background:white;border:1px solid var(--border);border-radius:15px;padding:16px 18px;margin:10px 0}.faq summary{font-weight:900;cursor:pointer;color:var(--navy)}.cta{background:var(--navy);color:white;border-radius:28px;padding:45px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}.cta h2{color:white;margin-top:0}.cta p{color:#dbe3e9}footer{padding:30px 0 45px;color:var(--muted);font-size:13px}.badge{display:inline-block;background:#fff5c7;color:#6b5600;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800}
+@media(max-width:800px){.hero,.calculator,.cta{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:45px}section{padding:52px 0}.cta{padding:30px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav><div class="logo">OBRER <span>INVERSOR</span></div><div class="navlinks"><a href="#guia">La guía</a><a href="#calculadora">Calculadora</a><a href="#plan">Plan 30 días</a><a href="#faq">FAQ</a></div></nav>
+<div class="hero">
+<div><span class="eyebrow">Guía práctica · 0 € a inversor</span><h1>Empieza a construir patrimonio.</h1><p>No necesitas ser experto en finanzas. Necesitas entender tus números, crear una base sólida y construir un sistema que puedas mantener durante años.</p><div class="actions"><a class="btn btn-green" href="#guia">Empezar la guía ↓</a><a class="btn btn-light" href="#calculadora">Probar calculadora</a></div></div>
+<div class="hero-card"><span class="badge">TU PUNTO DE PARTIDA</span><div class="big">100 €/mes</div><p>Puede parecer poco. Pero crear el hábito de invertir de forma constante puede ser mucho más importante que empezar con una cantidad enorme.</p><div class="progress"><i></i></div><div class="mini">Orden → colchón → inversión → constancia → patrimonio</div></div>
+</div></div>
+</header>
+
+<main>
+<section id="guia"><div class="container"><div class="section-head"><div class="kicker">El método Obrer Inversor</div><h2>5 pasos para empezar sin complicarte.</h2><p>La idea no es encontrar la inversión perfecta. Es construir un proceso que puedas repetir.</p></div>
+<div class="grid">
+<div class="card"><div class="number">1</div><h3>Conoce tus números</h3><p>Ingresos, gastos, ahorro y patrimonio neto. Sin esto, estás tomando decisiones a ciegas.</p></div>
+<div class="card"><div class="number">2</div><h3>Crea tu colchón</h3><p>Separa el dinero que necesitas para imprevistos del dinero destinado al largo plazo.</p></div>
+<div class="card"><div class="number">3</div><h3>Entiende dónde inviertes</h3><p>Antes de comprar nada, entiende diversificación, costes, riesgo y horizonte temporal.</p></div>
+<div class="card"><div class="number">4</div><h3>Automatiza</h3><p>Una cantidad sostenible cada mes puede ayudarte a convertir la inversión en un hábito.</p></div>
+<div class="card"><div class="number">5</div><h3>Piensa a largo plazo</h3><p>Habrá años buenos y malos. El objetivo es tener un plan que puedas mantener.</p></div>
+<div class="card"><div class="number">+</div><h3>Sin humo</h3><p>No hay rentabilidades garantizadas ni fórmulas mágicas. Solo educación, números y disciplina.</p></div>
+</div></div></section>
+
+<section id="calculadora"><div class="container"><div class="section-head"><div class="kicker">Herramienta interactiva</div><h2>¿Qué pasa si empiezas con poco?</h2><p>Prueba diferentes cantidades. La estimación es una simulación educativa, no una predicción.</p></div>
+<div class="calculator"><div class="panel"><label for="initial">Capital inicial (€)</label><input id="initial" type="number" min="0" max="10000000" step="100" value="0"><label for="monthly">Aportación mensual (€)</label><input id="monthly" type="number" min="0" max="100000" step="10" value="100"><label for="years">Años</label><input id="years" class="range" type="range" min="1" max="40" value="20"><div><span id="yearsValue">20</span> años</div><label for="return">Rentabilidad anual simulada (%)</label><input id="return" type="number" min="-20" max="30" step="0.5" value="5"><button class="btn btn-green" id="calc" type="button" style="margin-top:18px;width:100%">Calcular</button></div>
+<div class="panel"><div class="mini">Valor final estimado</div><div class="result" aria-live="polite"><strong id="future">0 €</strong><div id="contrib">Aportaciones: 0 €</div><div id="growth">Crecimiento simulado: 0 €</div></div><p class="mini">La simulación supone un capital inicial, aportaciones mensuales y una rentabilidad constante. En la vida real los mercados no funcionan así.</p></div></div></div></section>
+
+<section id="plan"><div class="container"><div class="section-head"><div class="kicker">Plan de acción</div><h2>Tu primer mes, paso a paso.</h2><p>Marca cada tarea. El objetivo es terminar el mes con un sistema, no con más teoría.</p></div>
+<div class="checklist">
+<label class="check"><input type="checkbox"><span><b>Semana 1:</b> calcular ingresos, gastos y patrimonio neto.</span></label>
+<label class="check"><input type="checkbox"><span><b>Semana 2:</b> calcular gastos esenciales y definir el fondo de emergencia.</span></label>
+<label class="check"><input type="checkbox"><span><b>Semana 3:</b> entender fondos indexados, diversificación, costes y riesgo.</span></label>
+<label class="check"><input type="checkbox"><span><b>Semana 4:</b> elegir una cantidad sostenible y crear el sistema de aportación.</span></label>
+</div></div></section>
+
+<section><div class="container"><div class="section-head"><div class="kicker">Aprende lo esencial</div><h2>Sin jerga innecesaria.</h2></div>
+<div class="tabs">
+<button class="tab active" data-tab="patrimonio">Patrimonio neto</button>
+<button class="tab" data-tab="emergencia">Fondo de emergencia</button>
+<button class="tab" data-tab="indexados">Fondos indexados</button>
+<button class="tab" data-tab="dca">DCA</button>
+<button class="tab" data-tab="riesgo">Riesgo</button>
+</div><div id="patrimonio" class="tabpanel active card"><h3>¿Qué es el patrimonio neto?</h3><p>Es una forma sencilla de saber cuánto tienes realmente. Se calcula sumando el valor de todos tus activos y restando todas tus deudas.</p><p><b>Patrimonio neto = lo que tienes − lo que debes.</b></p><p>Por ejemplo, si tienes 20.000 € en ahorros, 10.000 € invertidos y un coche valorado en 8.000 €, tienes 38.000 € en activos. Si además debes 12.000 €, tu patrimonio neto sería de 26.000 €.</p><p>Medirlo de vez en cuando te permite ver si estás construyendo patrimonio, aunque tu cuenta bancaria no siempre lo refleje.</p></div>
+<div id="emergencia" class="tabpanel card"><h3>¿Qué es un fondo de emergencia?</h3>
+<p>Es el dinero que mantienes disponible para hacer frente a imprevistos sin tener que vender tus inversiones. No busca darte rentabilidad: busca darte <b>tranquilidad y liquidez</b>.</p>
+<p>Como referencia orientativa, muchas personas pueden plantearse tener entre <b>3 y 6 meses de gastos esenciales</b>, aunque la cantidad adecuada depende de cada situación.</p>
+<div style="margin-top:16px;padding:16px;border-radius:14px;background:#f7f9fb;border:1px solid var(--border)">
+<b>Ejemplo</b><br>
+Gastos esenciales: 1.200 €/mes<br>
+→ 3 meses = <b>3.600 €</b><br>
+→ 6 meses = <b>7.200 €</b>
+</div></div>
+<div id="indexados" class="tabpanel card"><h3>¿Qué es un fondo indexado?</h3><p>Un fondo indexado busca replicar el comportamiento de un índice. Puede darte exposición diversificada a muchas empresas mediante una sola inversión. Indexado no significa sin riesgo.</p></div>
+<div id="dca" class="tabpanel card"><h3>¿Qué es el DCA?</h3><p>Es invertir una cantidad determinada de forma periódica. Su utilidad práctica es crear disciplina y reducir la necesidad de acertar el mejor momento para entrar.</p></div>
+<div id="riesgo" class="tabpanel card"><h3>¿Qué riesgo estás asumiendo?</h3><p>El valor de una inversión de mercado puede subir y bajar. El horizonte temporal, la diversificación y tu capacidad para soportar caídas son claves.</p></div>
+
+
+
+
+</div></section>
+
+<section id="faq"><div class="container"><div class="section-head"><div class="kicker">Preguntas frecuentes</div><h2>Lo que preguntaría antes de empezar.</h2></div><div class="faq">
+<details><summary>¿Necesito mucho dinero para empezar?</summary><p>No necesariamente. Lo importante es que la cantidad sea sostenible para ti y que no estés invirtiendo dinero que necesitas a corto plazo.</p></details>
+<details><summary>¿Un fondo indexado garantiza ganar dinero?</summary><p>No. Una inversión de mercado puede perder valor. La diversificación y el largo plazo pueden formar parte de una estrategia, pero no eliminan el riesgo.</p></details>
+<details><summary>¿Tengo que invertir todos mis ahorros?</summary><p>No. El dinero destinado a emergencias y objetivos cercanos puede necesitar mantenerse líquido. La estrategia debe adaptarse a tu situación.</p></details>
+<details><summary>¿Cuál es la mejor inversión?</summary><p>No existe una respuesta universal. Antes de elegir, hay que mirar objetivo, plazo, riesgo, diversificación, costes y fiscalidad.</p></details>
+</div></div></section>
+
+<section><div class="container"><div class="cta"><div><h2>¿Y ahora qué?</h2><p>Ya tienes los conceptos básicos para empezar a ordenar tus finanzas.</p><p>Si quieres seguir aprendiendo sobre inversión, ahorro y cómo mejorar tus finanzas desde la perspectiva de un trabajador normal:</p><p><strong>👉 <a href="https://www.threads.com/@obrer.inversor" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none">Sigue a Obrer Inversor en Threads ↗</a></strong><br><span style="opacity:.8">Sin humo. Sin promesas. Paso a paso.</span></p></div><a class="btn btn-green" href="#guia">Volver al principio ↑</a></div></div></section>
+</main>
+<footer><div class="container">OBRER INVERSOR · Trabajar · Ahorrar · Invertir · Construir patrimonio<br><br>Contenido educativo. No constituye asesoramiento financiero personalizado. Las simulaciones son hipotéticas y no garantizan resultados.</div></footer>
+
+<script>
+(function(){
+const monthly=document.querySelector('#monthly'),years=document.querySelector('#years'),ret=document.querySelector('#return'),yearsValue=document.querySelector('#yearsValue'),future=document.querySelector('#future'),contrib=document.querySelector('#contrib'),growth=document.querySelector('#growth');
+function euro(n){return new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n)}
+function calculate(){let initial=Math.max(0,Math.min(10000000,Number(document.querySelector('#initial').value)||0));let m=Math.max(0,Math.min(100000,Number(monthly.value)||0));let y=Math.max(1,Math.min(40,Number(years.value)||1));let r=Math.max(-20,Math.min(30,Number(ret.value)||0))/100/12;yearsValue.textContent=y;let months=y*12;let growthFactor=Math.pow(1+r,months);let monthlyFuture=Math.abs(r)<1e-12?m*months:m*((growthFactor-1)/r);let initialFuture=initial*growthFactor;let total=Math.max(0,initialFuture+monthlyFuture);let aport=initial+m*months;future.textContent=euro(total);contrib.textContent='Capital inicial + aportaciones: '+euro(aport);growth.textContent='Crecimiento simulado: '+euro(Math.max(0,total-aport))}
+['input','change'].forEach(ev=>{document.querySelector('#initial').addEventListener(ev,calculate);monthly.addEventListener(ev,calculate);years.addEventListener(ev,calculate);ret.addEventListener(ev,calculate)});document.querySelector('#calc').addEventListener('click',calculate);calculate();
+document.querySelectorAll('.tab').forEach(tab=>tab.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));tab.classList.add('active');document.getElementById(tab.dataset.tab).classList.add('active')}));
+})();
+</script>
+</body>
+</html>
